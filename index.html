@@ -1,56 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="http://unslider.com/unslider.min.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            $(function() {
+                $('.banner').unslider({
+                    speed: 700,               //  The speed to animate each slide (in milliseconds)
+                    delay: 3000,              //  The delay between slide animations (in milliseconds)
+                    keys: true,               //  Enable keyboard (left, right) arrow shortcuts
+                    dots: true,               //  Display dot navigation
+                    fluid: true              //  Support responsive design. May break non-responsive designs
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+                });
+                var unslider = $('.banner').unslider();
 
-    <title>Stitcher by MohamedIM</title>
-  </head>
+                $('.prev').click(function() {
+                    unslider.data('unslider').prev();
+                });
 
-  <body>
-    <header>
-      <div class="inner">
-        <h1>Stitcher</h1>
-        <h2></h2>
-        <a href="https://github.com/MohamedIM/stitcher" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+                $('.next').click(function() {
+                    unslider.data('unslider').next();
+                });
+                return false;
+            });
+        </script>
+        <style type="text/css" >
+           .banner { position: relative; overflow: auto; }
+           .banner li { list-style: none; background-repeat:no-repeat; }
+           .banner ul li { float: left; min-height: 601px;}
+        </style>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>
-<a id="stetcher" class="anchor" href="#stetcher" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stetcher.</h3>
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
 
-<p>An image stitching program written in python using OpenCV</p>
-        </section>
+            <title>Stitcher by MohamedIM</title>
+    </head>
 
-        <aside id="sidebar">
-          <a href="https://github.com/MohamedIM/stitcher/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/MohamedIM/stitcher/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+    <body>
+        <header>
+            <div class="inner">
+                <h1>Stitcher</h1>
+                <h2></h2>
+                <a href="https://github.com/MohamedIM/stitcher" class="button"><small>View project on</small> GitHub</a>
+            </div>
+        </header>
+        <div class="banner">
+            <ul>
+                <li style="background-image: url('images/demos/demo1.png');"></li>
+                <li style="background-image: url('images/demos/demo2.png');"></li>
+            </ul>
+        </div>
+        <div id="content-wrapper">
+            <div class="inner clearfix">
+                <section id="main-content">
+                    <h3>
+                        <a id="stitcher" class="anchor" href="#stitcher" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stitcher.</h3>
 
-          <p class="repo-owner"><a href="https://github.com/MohamedIM/stitcher"></a> is maintained by <a href="https://github.com/MohamedIM">MohamedIM</a>.</p>
+                    <p>An image stitching program written in python using OpenCV</p>
+                </section>
 
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
+                <aside id="sidebar">
+                    <a href="https://github.com/MohamedIM/stitcher/zipball/master" class="button">
+                        <small>Download</small>
+                        .zip file
+                    </a>
+                    <a href="https://github.com/MohamedIM/stitcher/tarball/master" class="button">
+                        <small>Download</small>
+                        .tar.gz file
+                    </a>
 
-  
-  </body>
+                    <p class="repo-owner"><a href="https://github.com/MohamedIM/stitcher"></a> is maintained by <a href="https://github.com/MohamedIM">MohamedIM</a>.</p>
+
+                </aside>
+            </div>
+        </div>
+
+
+    </body>
 </html>
